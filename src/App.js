@@ -1,14 +1,38 @@
 import React from "react"
-import { Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles"
+import { BrowserRouter, Route } from "react-router-dom"
+import Navbar from "./components/Navbar"
+import Home from "./components/Home"
+import Journey from "./components/Journey"
+import Team from "./components/Team"
+import Store from "./components/Store"
+import Contact from "./components/Contact"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import { createTheme, ThemeProvider } from "@material-ui/core/styles"
 
-const useStyles = makeStyles({})
-
-const App = () => {
+const newtheme = createTheme({})
+function App() {
   return (
-    <>
-      <Typography> App </Typography>
-    </>
+    <ThemeProvider theme={newtheme}>
+      <BrowserRouter>
+        <CssBaseline />
+        <Navbar />
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/journey" exact>
+          <Journey />
+        </Route>
+        <Route path="/team" exact>
+          <Team />
+        </Route>
+        <Route path="/store" exact>
+          <Store />
+        </Route>
+        <Route path="/contact" exact>
+          <Contact />
+        </Route>
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

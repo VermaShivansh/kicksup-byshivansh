@@ -9,3 +9,40 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+a,
+a:hover,
+a:active {
+  text-decoration: none !important;
+  color: inherit;
+}
+.lineafter {
+  display: inline-block;
+  position: relative;
+  transition: all 2s ease-in-out !important;
+  transform: scaleX(1.05);
+}
+.lineafter:hover::after {
+  content: "";
+  height: 2px;
+  width: 75%;
+  background: black;
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+  transition: all 2s ease-in-out !important;
+}
+.active::after {
+  transition: all 2s ease-in-out !important;
+  content: "";
+  height: 2px;
+  width: 75%;
+  background: black;
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+  /*   another way you can achieve this
+  Check this link: 
+  https://goo.gl/GgRdjz
+  
+  */
+}
