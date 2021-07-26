@@ -151,7 +151,7 @@ const Navbar = () => {
                   {["top"].map((anchor) => (
                     <React.Fragment key={anchor}>
                       <Button onClick={toggleDrawer(anchor, true)}>
-                        <MenuRoundedIcon fontSize="large" sx={{ color: "black" }} />
+                        <MenuRoundedIcon fontSize="large" sx={{ color: "#000" }} />
                       </Button>
                       <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
                         {list(anchor)}

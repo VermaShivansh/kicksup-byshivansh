@@ -69,21 +69,20 @@ const Team = () => {
             <CardActionArea>
               <CardMedia className={classes.media} image={ronaldo} title="image" />
             </CardActionArea>
-            <CardActions>
-              <CardContent sx={{ padding: "5px", paddingLeft: 0, textAlign: "center" }}>
-                <Typography variant="h6" color="initial">
-                  Zidane
-                </Typography>
-                <Typography gutterBottom variant="subtitle2" color="initial">
-                  Leadership and Management
-                </Typography>
-                <Typography variant="subtitle2" color="initial" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <LinkedInIcon color="primary" sx={{ fontSize: "33px", marginRight: "12px", cursor: "pointer" }} />
-                  <img src={Medium} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
-                  <img src={facebook} sizes="cover" width="28px" style={{ marginRight: "12px", cursor: "pointer" }} />
-                </Typography>
-              </CardContent>
-            </CardActions>
+
+            <CardContent sx={{ padding: "5px", marginTop: "8px", paddingLeft: 0, textAlign: "center" }}>
+              <Typography variant="h6" color="initial">
+                Zidane
+              </Typography>
+              <Typography gutterBottom variant="subtitle2" color="initial">
+                Leadership and Management
+              </Typography>
+              <Typography variant="subtitle2" color="initial" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <LinkedInIcon color="primary" sx={{ fontSize: "33px", marginRight: "12px", cursor: "pointer" }} />
+                <img src={Medium} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
+                <img src={facebook} sizes="cover" width="28px" style={{ marginRight: "12px", cursor: "pointer" }} />
+              </Typography>
+            </CardContent>
           </Card>
           <Card className={classes.cardRoot}>
             <CardActionArea>

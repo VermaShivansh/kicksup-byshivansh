@@ -1,5 +1,5 @@
 import React from "react"
-import { Typography, Grid, Button, Box } from "@material-ui/core"
+import { Typography, Grid, Button, Box, useMediaQuery } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined"
 import { shoesData } from "./shoesdata"
@@ -15,6 +15,7 @@ const useStyles = makeStyles({
 const Shoes = (props) => {
   const classes = useStyles()
   const [showSearch, setshowSearch] = React.useState()
+  const matches600 = useMediaQuery("(max-width:600px)")
   var { priceFilterBackend } = props
   return (
     <Grid className={classes.shoes} item md={6} xs={12} m={1} p={3} pt={4}>
@@ -32,7 +33,7 @@ const Shoes = (props) => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={12} mt={2} sx={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
+      <Grid item xs={12} mt={2} justifyContent={matches600 ? "space-evenly" : "space-between"} sx={{ display: "flex", flexWrap: "wrap" }}>
         {shoesData.map((data, index) => {
           if (data.price >= priceFilterBackend[0] && data.price <= priceFilterBackend[1]) {
             return <ShoesCard data={data} />
