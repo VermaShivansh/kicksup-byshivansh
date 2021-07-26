@@ -18,7 +18,7 @@ const Cart = () => {
   const classes = useStyles()
   const matches900 = useMediaQuery("(max-width:900px)")
   return (
-    <Grid className={classes.cart} item md m={1} p={3} pb={1} pt={4} sx={{ position: `${matches900 ? "static" : "sticky"}` }}>
+    <Grid className={classes.cart} container item md m={1} p={3} pb={1} pt={4} sx={{ position: `${matches900 ? "static" : "sticky"}` }}>
       <Grid xs={12} item sx={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant="h6" color="initial" letterSpacing={1} fontWeight={600} sx={{ transform: "scaleX(1.05)" }}>
           CART
