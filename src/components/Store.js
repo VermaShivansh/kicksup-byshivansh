@@ -1,15 +1,21 @@
 import React from "react"
-import { Typography } from "@material-ui/core"
+import { Grid } from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles"
+import Filters from "./Filters"
+import Shoes from "./Shoes.js"
+import Cart from "./Cart"
 
 const useStyles = makeStyles({})
 
-const Store = () => {
+const Team = () => {
+  const classes = useStyles()
   return (
-    <>
-      <Typography> Store </Typography>
-    </>
+    <Grid container p={1} spacing={0} mt={1} className={classes.root}>
+      <Filters />
+      <Shoes />
+      <Cart />
+    </Grid>
   )
 }
 
-export default Store
+export default Team

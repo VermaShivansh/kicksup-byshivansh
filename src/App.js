@@ -9,7 +9,16 @@ import Contact from "./components/Contact"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import { createTheme, ThemeProvider } from "@material-ui/core/styles"
 
-const newtheme = createTheme({})
+const newtheme = createTheme({
+  palette: {
+    black: {
+      light: "#000",
+    },
+  },
+  black: {
+    light: "#000",
+  },
+})
 function App() {
   return (
     <ThemeProvider theme={newtheme}>

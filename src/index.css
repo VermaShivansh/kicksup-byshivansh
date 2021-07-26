@@ -46,3 +46,18 @@ a:active {
   
   */
 }
+input {
+  padding: 1px !important;
+}
+.teams {
+  width: 100%;
+  height: 100%;
+  background-image: url("./components/images/teambg.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+@media only screen and (max-width: 1137px) {
+  .teams {
+    background: none;
+  }
+}
