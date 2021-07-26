@@ -80,7 +80,7 @@ const Team = () => {
               <Typography variant="subtitle2" color="initial" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <LinkedInIcon color="primary" sx={{ fontSize: "33px", marginRight: "12px", cursor: "pointer" }} />
                 <img src={Medium} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
-                <img src={facebook} sizes="cover" width="28px" style={{ marginRight: "12px", cursor: "pointer" }} />
+                <img src={facebook} sizes="cover" width="28px" style={{ cursor: "pointer" }} />
               </Typography>
             </CardContent>
           </Card>
@@ -98,7 +98,7 @@ const Team = () => {
               </Typography>
               <Typography variant="subtitle2" color="initial" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <LinkedInIcon color="primary" sx={{ fontSize: "33px", marginRight: "12px", cursor: "pointer" }} />
-                <img src={Medium} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
+                <img src={Medium} sizes="cover" width="25px" style={{ cursor: "pointer" }} />
               </Typography>
             </CardContent>
           </Card>
@@ -115,7 +115,7 @@ const Team = () => {
                 Marketing strategy
               </Typography>
               <Typography variant="subtitle2" color="initial" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <img src={Medium} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
+                <img src={Medium} sizes="cover" width="25px" style={{ cursor: "pointer" }} />
               </Typography>
             </CardContent>
           </Card>
@@ -135,7 +135,7 @@ const Team = () => {
                 <img src={Medium} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
 
                 <img src={behance} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
-                <img src={dribble} sizes="cover" width="25px" style={{ marginRight: "12px", cursor: "pointer" }} />
+                <img src={dribble} sizes="cover" width="25px" style={{ cursor: "pointer" }} />
               </Typography>
             </CardContent>
           </Card>
@@ -154,7 +154,7 @@ const Team = () => {
               <Typography variant="subtitle2" color="initial" sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <LinkedInIcon color="primary" sx={{ fontSize: "33px", marginRight: "12px", cursor: "pointer" }} />
 
-                <img src={facebook} sizes="cover" width="28px" style={{ marginRight: "12px", cursor: "pointer" }} />
+                <img src={facebook} sizes="cover" width="28px" style={{ cursor: "pointer" }} />
               </Typography>
             </CardContent>
           </Card>
