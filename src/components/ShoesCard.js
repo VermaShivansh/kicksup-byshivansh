@@ -33,7 +33,6 @@ const ShoesCard = (props) => {
       starArray.push(<StarOutlineOutlinedIcon fontSize="x-small" sx={{ color: "#ffbe0b" }} />)
     }
   }
-  console.log(starArray)
   return (
     <Card className={classes.root} elevation={0}>
       <CardActionArea sx={{ padding: "10px" }}>
