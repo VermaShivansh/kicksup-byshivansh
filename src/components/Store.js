@@ -9,10 +9,11 @@ const useStyles = makeStyles({})
 
 const Team = () => {
   const classes = useStyles()
+  const [priceFilterBackend, setpriceFilterBackend] = React.useState([0, 99999])
   return (
     <Grid container p={1} spacing={0} mt={1} className={classes.root}>
-      <Filters />
-      <Shoes />
+      <Filters setpriceFilterBackend={setpriceFilterBackend} />
+      <Shoes priceFilterBackend={priceFilterBackend} />
       <Cart />
     </Grid>
   )

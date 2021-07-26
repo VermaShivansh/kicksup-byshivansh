@@ -12,9 +12,10 @@ const useStyles = makeStyles({
   },
 })
 
-const Shoes = () => {
+const Shoes = (props) => {
   const classes = useStyles()
   const [showSearch, setshowSearch] = React.useState()
+  var { priceFilterBackend } = props
   return (
     <Grid className={classes.shoes} item md={6} xs={12} m={1} p={3} pt={4}>
       <Grid xs={12} item sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -31,9 +32,11 @@ const Shoes = () => {
           </Box>
         </Box>
       </Grid>
-      <Grid item xs={12} mt={2} sx={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
+      <Grid item xs={12} mt={2} sx={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap" }}>
         {shoesData.map((data, index) => {
-          return <ShoesCard data={data} />
+          if (data.price >= priceFilterBackend[0] && data.price <= priceFilterBackend[1]) {
+            return <ShoesCard data={data} />
+          }
         })}
       </Grid>
     </Grid>

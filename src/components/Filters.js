@@ -13,9 +13,25 @@ const useStyles = makeStyles({
   },
 })
 
-const Filters = () => {
+const Filters = (props) => {
   const classes = useStyles(-1)
   const matches900 = useMediaQuery("(max-width:900px)")
+  var [priceFilterFrontend, setpriceFilterFrontend] = React.useState()
+  var { setpriceFilterBackend } = props
+  React.useEffect(() => {
+    if (priceFilterFrontend == 0) {
+      setpriceFilterBackend([0, 99999])
+    }
+    if (priceFilterFrontend == 1) {
+      setpriceFilterBackend([3000, 4000])
+    }
+    if (priceFilterFrontend == 2) {
+      setpriceFilterBackend([4001, 7000])
+    }
+    if (priceFilterFrontend == 3) {
+      setpriceFilterBackend([7001, 99999])
+    }
+  }, [priceFilterFrontend])
   return (
     <Grid container className={classes.filter} item md m={1} p={3} pt={4} sx={{ position: `${matches900 ? "static" : "sticky"}` }}>
       <Grid xs={12} item sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -31,15 +47,39 @@ const Filters = () => {
           Cost
         </Typography>
         <Box p={0}>
-          <input type="checkbox" color="default" style={{ marginRight: "10px" }} />
+          <input
+            type="checkbox"
+            color="default"
+            style={{ marginRight: "10px" }}
+            onClick={() => {
+              priceFilterFrontend == 1 ? setpriceFilterFrontend(0) : setpriceFilterFrontend(1)
+            }}
+            checked={priceFilterFrontend == 1 ? true : false}
+          />
           3000-4000
         </Box>
         <Box p={0}>
-          <input type="checkbox" color="default" style={{ marginRight: "10px" }} />
+          <input
+            type="checkbox"
+            color="default"
+            style={{ marginRight: "10px" }}
+            onClick={() => {
+              priceFilterFrontend == 2 ? setpriceFilterFrontend(0) : setpriceFilterFrontend(2)
+            }}
+            checked={priceFilterFrontend == 2 ? true : false}
+          />
           4001-7000
         </Box>
         <Box p={0}>
-          <input type="checkbox" color="default" style={{ marginRight: "10px" }} />
+          <input
+            type="checkbox"
+            color="default"
+            style={{ marginRight: "10px" }}
+            onClick={() => {
+              priceFilterFrontend == 3 ? setpriceFilterFrontend(0) : setpriceFilterFrontend(3)
+            }}
+            checked={priceFilterFrontend == 3 ? true : false}
+          />
           7001+
         </Box>
       </Grid>
