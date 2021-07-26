@@ -20,7 +20,7 @@ const Filters = () => {
     <Grid container className={classes.filter} item md m={1} p={3} pt={4} sx={{ position: `${matches900 ? "static" : "sticky"}` }}>
       <Grid xs={12} item sx={{ display: "flex", justifyContent: "space-between" }}>
         <Typography variant="h6" color="initial" letterSpacing={1} fontWeight={600} sx={{ transform: "scaleX(1.05)" }}>
-          FILTER
+          FILTERS
         </Typography>
         <Typography variant="h6" color="initial">
           <img src={filter} alt="filter icon" width="35px" />
